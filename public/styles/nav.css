@@ -8,7 +8,7 @@ nav {
 }
 
 .logo_name {
-  font-family: 'Bungee';
+  font-family: 'Bungee', cursive;
   display: flex;
   margin: 0 1.5em;
   padding-bottom: 1em;

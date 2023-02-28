@@ -34,6 +34,9 @@
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+  <!-- Char Counter JS -->
+  <script src="./scripts/composer-char-counter.js"></script>
+
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
 </head>
@@ -49,7 +52,6 @@
     </div>
   </nav>
   <header>
-
     <div class="content">
       <img src="/images/profile-hex.png">
     </div>
@@ -63,27 +65,15 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <!-- <h3>What are you humming about?</h3>
-    <h2>there</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed doloribus ut alias impedit quisquam repellendus
-      veniam accusamus unde ipsa harum est, ex qui eius aperiam? Explicabo ipsa architecto tempore ab?
-      Quisquam nisi suscipit reiciendis! Accusantium commodi reprehenderit, nostrum temporibus nihil perferendis dolor
-      ad at eligendi quam neque necessitatibus natus consequatur aliquid maiores alias optio, asperiores, debitis vero
-      eveniet odio eius?
-      Cum quas ab quasi vitae voluptatibus, aliquam dolorem explicabo est! Nemo similique reprehenderit, corporis iure
-      ipsum nam culpa unde tempore ea eum expedita possimus nulla aliquam voluptas error qui. Deleniti!
-      Ex, reprehenderit quas? Mollitia, qui modi veritatis est natus iste voluptatem consectetur ipsum quibusdam?
-      Eligendi cupiditate eius maxime ad repellat aperiam. Quibusdam iste laborum delectus similique eveniet sapiente
-      quis a?</p> -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form action="/tweets" method="POST">
         <!-- <label for="tweet-text">What are you humming about?</label> -->
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div>
+        <footer>
           <button type="submit" class="tweet-button">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
+        </footer>
       </form>
     </section>
   </main>
