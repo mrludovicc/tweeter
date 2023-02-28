@@ -32,7 +32,11 @@ form footer {
 
 .tweet-button {
   font-size: 0.7em;
-  background-color: #4056A1;
+  background-color: #5978db;
   border: 1px black solid;
   color: #FFF;
+}
+
+.tweet-button:hover {
+  background-color: #4056A1;
 }
