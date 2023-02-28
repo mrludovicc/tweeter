@@ -1,0 +1,55 @@
+.tweets {
+  margin: 1em 0;
+  width: 90%;
+  font-family: "Source Sans Pro", cursive;
+  border: 3px #545149 solid;
+}
+
+.tweets:hover {
+  box-shadow: 10px 5px 5px #54514980;
+}
+
+.tweets header {
+  display: flex;
+}
+
+.icon-name {
+  display: flex;
+  flex-direction: row;
+}
+
+#nickname {
+  display: flex;
+  font-size: 20px;
+  color: #54514980;
+  font-weight: 600;
+  width: 80%;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.fa-circle-user {
+  margin: 0.6em 0.5em 0 0;
+  padding: 0.5em 0 0 0.5em
+}
+
+.tweets article {
+  margin-left: 2%;
+  width: 95%;
+  border-bottom: 3px #545149 solid;
+}
+
+.tweets footer {
+  display: flex;
+  margin: -0.5em 0 0 0.8em;
+  width: 95%;
+  justify-content: space-between;
+}
+
+.icons {
+  color: #4056A1;
+}
+
+.icons p:hover {
+  color: rgb(212, 185, 28);
+}

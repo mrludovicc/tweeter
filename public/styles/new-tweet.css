@@ -24,7 +24,7 @@
   outline-color: #545149;
 }
 
-footer {
+form footer {
   display: flex;
   justify-content: space-between;
   margin-top: 0.2em;

@@ -28,6 +28,9 @@
   <!-- New tweet CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
 
+  <!-- Tweets CSS -->
+  <link rel="stylesheet" href="/styles/tweets.css" type="text/css">
+
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
@@ -51,7 +54,7 @@
       <span class="fa-solid fa-angles-down"></span>
     </div>
   </nav>
-  <header>
+  <header class="nav-header">
     <div class="content">
       <img src="/images/profile-hex.png">
     </div>
@@ -75,6 +78,29 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </footer>
       </form>
+    </section>
+    <section class="tweets">
+      <header>
+        <div class="icon-name">
+          <i class="fa-solid fa-circle-user"></i>
+          <p>Name name</p>
+        </div>
+        <div id="nickname">
+          <p>@nickname</p>
+        </div>
+      </header>
+      <article>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat harum ratione sunt, ex aperiam odio sit
+          quibusdam quaerat doloremque earum quod ab vel quis enim dolorum rerum alias. Harum, nostrum.</p>
+      </article>
+      <footer>
+        <h6>10 days</h6>
+        <div class="icons">
+          <p class="fa-solid fa-flag"></p>
+          <p class="fa-solid fa-retweet"></p>
+          <p class="fa-solid fa-heart"></p>
+        </div>
+      </footer>
     </section>
   </main>
 </body>
