@@ -5,8 +5,13 @@
  */
 html {
   box-sizing: border-box;
+  font-family: 'Bungee', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -23,3 +28,19 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  display: flex;
+  margin: 0 5%;
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  display: flex;
+  width: 100%;
+  padding-bottom: 0.2em;
+  border-bottom: 5px solid gray;
+}

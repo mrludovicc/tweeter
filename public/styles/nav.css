@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  position: fixed;
+  background-color: #4056A1;
+  color: #FFF;
+  height: 120px;
+  width: 100%;
+}
+
+.logo_name {
+  font-family: 'Bungee';
+  display: flex;
+  margin: 0 1.5em;
+  padding-bottom: 1em;
+  align-self: flex-end;
+}
+
+.nav_left {
+  flex-grow: 1;
+  display: flex;
+  margin-right: 1.5em;
+  flex-flow: column wrap;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: center;
+
+}
+
+.fa-solid {
+  color: #F12400;
+}
