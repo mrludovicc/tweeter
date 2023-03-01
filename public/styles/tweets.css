@@ -1,3 +1,10 @@
+.tweetsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .tweets {
   margin: 1em 0;
   width: 90%;
@@ -34,7 +41,7 @@
   padding: 0.5em 0 0 0.5em
 }
 
-.tweets article {
+.tweets #mainContent {
   margin-left: 2%;
   width: 95%;
   border-bottom: 3px #545149 solid;

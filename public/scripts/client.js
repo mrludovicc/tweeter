@@ -3,17 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const createTweetElement = (users) => {
-//   // $sectionContainer = $('<section>').addClass('tweets');
-//   $header = $(`<header>`).appendTo(`$sectionContainer`)
-//   $headerFirstDiv = $(`<div class="icon-name">`).addClass(`icon-name`).appendTo(`$header`)
-//   $avatar = $(`img`).attr({
-//     alt: "avatar",
-//     width: `50`,
-//     height: `50`
-//   }).appendTo(`$headerFirstDiv`)
-//   $name = $(`<p>`).appendTo(`$headerFirstDiv`)
-// }
+
 const tweets = [
   {
     "user": {
@@ -38,44 +28,44 @@ const tweets = [
     "created_at": 1677605965757
   }
 ]
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
-  },
-  "content": {
-    "text": "If I have seen further it is by standing on the shoulders of giants"
-  },
-  "created_at": 1461116232227
-}
+
 const createTweetElement = (tweet) => {
   const tweetUser = tweet.user;
   const $tweet = `
-    <header>
-      <div class="icon-name">
-        <img src="${tweetUser.avatars}" alt="logo" width="50" height="50">
-          <p>${tweetUser.name}</p>
+    <section class="tweets"> 
+      <header>
+        <div class="icon-name">
+          <img src="${tweetUser.avatars}" alt="logo" width="50"   height="50">
+            <p>${tweetUser.name}</p>
+        </div>
+        <div id="nickname">
+          <p>${tweetUser.handle}</p>
+        </div>
+      </header>
+      <div id='mainContent'>
+        <p>${tweet.content.text}</p>
       </div>
-      <div id="nickname">
-        <p>${tweetUser.handle}</p>
-      </div>
-    </header>
-    <article>
-      <p>${tweet.content.text}</p>
-    </article>
-    <footer>
-      <h6>${tweet.created_at}</h6>
-      <div class="icons">
-        <p class="fa-solid fa-flag"></p>
-        <p class="fa-solid fa-retweet"></p>
-        <p class="fa-solid fa-heart"></p>
-      </div>
-    </footer>
+      <footer>
+        <h6>${tweet.created_at}</h6>
+        <div class="icons">
+          <p class="fa-solid fa-flag"></p>
+          <p class="fa-solid fa-retweet"></p>
+          <p class="fa-solid fa-heart"></p>
+        </div>
+      </footer>
+    </section>
   `
   return $tweet;
 }
-const $tweet = createTweetElement(tweetData);
+
+
+const renderTweets = (tweets) => {
+  for (const user of tweets) {
+    const $tweet = createTweetElement(user)
+    $(`.tweetsContainer`).append($tweet)
+  }
+}
+
 $(() => {
-  $(`.tweets`).append($tweet)
+  renderTweets(tweets);
 })
