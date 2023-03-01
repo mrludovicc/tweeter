@@ -66,6 +66,13 @@ const renderTweets = (tweets) => {
   }
 }
 
+const submitTweets = () => {
+  $("#submitForm").submit(function (e) {
+    e.preventDefault();
+    $.post("/tweets", $("#submitForm").serialize());
+  });
+}
 $(() => {
   renderTweets(tweets);
+  submitTweets();
 })
