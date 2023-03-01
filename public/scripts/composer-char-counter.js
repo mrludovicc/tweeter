@@ -1,6 +1,4 @@
-$(() => {
-  // --- our code goes here ---
-  // const $area = $('#tweet-text')
+const charCounter = () => {
   $('#tweet-text').on('keyup', function () {
     let charCount = $(this).val().length
     let counter = $(this).next().find('.counter');
@@ -12,4 +10,10 @@ $(() => {
     }
     counter.html(currentCount);
   })
+
+}
+
+
+$(() => {
+  charCounter();
 });
