@@ -99,6 +99,8 @@ const loadTweets = () => {
     })
 }
 
+
+
 const redirecting = () => {
 
   const jumpToTextarea = document.querySelector('#jump-to-textarea');
@@ -114,6 +116,7 @@ const redirecting = () => {
 }
 
 $(() => {
+
   redirecting();
   submitTweets();
   loadTweets();

@@ -17,7 +17,27 @@
   margin-top: -0.5em;
 }
 
+.nav-header p:active {
+  color: #545149;
+}
+
 .content {
   margin-top: 6em;
   margin-bottom: 0px;
+}
+
+@media screen and (min-width: 1024px) {
+  .page-container {
+    display: flex;
+  }
+
+  .nav-header {
+    width: 60%;
+    margin: 12rem 1em 0 2em;
+    background-color: #016e01;
+  }
+
+  .nav-header p {
+    margin-bottom: 8rem;
+  }
 }
