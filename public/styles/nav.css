@@ -1,21 +1,23 @@
 nav {
   display: flex;
   position: fixed;
-  background-color: #4056A1;
   color: #FFF;
   height: 120px;
   width: 100%;
+  background-color: #d8ac1a;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
 .logo_name {
   font-family: 'Bungee', cursive;
+  font-size: 1.5em;
   display: flex;
   margin: 0 1.5em;
   padding-bottom: 1em;
   align-self: flex-end;
 }
 
-.nav_left {
+.nav_right {
   flex-grow: 1;
   display: flex;
   margin-right: 1.5em;
@@ -27,5 +29,40 @@ nav {
 }
 
 .fa-angles-down {
+  margin-top: 0.3em;
   color: #F12400;
+  cursor: pointer;
+}
+
+#jump-to-textarea2 {
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fa-angles-down {
+  transition: transform 0.4s ease-in-out;
+}
+
+.fa-angles-down:hover {
+  transform: scale(1.2);
+  animation: bounce 1s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.fa-angles-down:hover:active {
+  transform: scale(1);
+  animation: none;
 }

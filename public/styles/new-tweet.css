@@ -3,11 +3,19 @@
   width: 90%;
   flex-wrap: wrap;
   flex-direction: column;
-  font-family: 'Bungee';
+  font-family: 'Bungee', cursive;
+}
+
+#empty-text,
+#long-text {
+  margin-top: 0.5em;
+  color: rgb(182, 0, 0);
+  font-size: 1.2em;
+  border: 3px rgb(212, 0, 0) solid;
 }
 
 #tweet-text {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', cursive;
   overflow: hidden;
   display: flex;
   flex-grow: 1;
@@ -39,4 +47,8 @@ form footer {
 
 .tweet-button:hover {
   background-color: #4056A1;
+}
+
+.tweet-button:active {
+  background-color: #293c79;
 }

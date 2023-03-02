@@ -55,18 +55,20 @@
   <nav>
     <!-- <span>tweeter</span> -->
     <span class="logo_name">TWEETER</span>
-    <div class="nav_left">
-      <span><strong>Write</strong> a new tweet</span>
-      <span class="fa-solid fa-angles-down"></span>
+    <div class="nav_right">
+      <span id="jump-to-textarea2"><strong>Write</strong> a new tweet</span>
+      <span class="fa-solid fa-angles-down" id="jump-to-textarea"></span>
     </div>
   </nav>
   <header class="nav-header">
     <div class="content">
-      <img src="/images/profile-hex.png">
+      <img src="/images/profile-hex.png" id="jump-here">
     </div>
     <br>
     <div>
-      <h2>Mrludovic</p>
+      <a href="https://github.com/mrludovicc/tweeter" target="_blank">
+        <p><strong>Mrludovic</strong> Alabed</p>
+      </a>
     </div>
 
   </header>
@@ -74,9 +76,16 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <div id="empty-text" hidden>
+      <p>❌Please insert some text to tweet!❌</p>
+    </div>
+    <div id="long-text" hidden>
+      <p>❌Text is too long please make it less than 140 character!❌</p>
+    </div>
     <section class="new-tweet">
+      <div class="error-msg"></div>
       <h2>Compose Tweet</h2>
-      <form action="/tweets" method="POST" id="submitForm">
+      <form action="/tweets" method="POST" id="submit-form">
         <!-- <label for="tweet-text">What are you humming about?</label> -->
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <footer>
@@ -85,7 +94,7 @@
         </footer>
       </form>
     </section>
-    <article class="tweetsContainer">
+    <article class="tweets-container">
       <!-- <section class="tweets">
         <header>
         <div class="icon-name">

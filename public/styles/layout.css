@@ -43,3 +43,20 @@ h3 {
   padding-bottom: 0.2em;
   border-bottom: 5px solid gray;
 }
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active {
+  text-decoration: none;
+}

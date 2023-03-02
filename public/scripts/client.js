@@ -29,7 +29,14 @@ const tweets = [
   }
 ]
 
+const escapeP = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = (tweet) => {
+  const safeHTML = escapeP(tweet.content.text);
   const tweetUser = tweet.user;
   const $tweet = `
     <section class="tweets"> 
@@ -42,8 +49,8 @@ const createTweetElement = (tweet) => {
           <p>${tweetUser.handle}</p>
         </div>
       </header>
-      <div id='mainContent'>
-        <p>${tweet.content.text}</p>
+      <div id='main-content'>
+        <p>${safeHTML}</p>
       </div>
       <footer>
         <h6>${timeago.format(tweet.created_at)}</h6>
@@ -62,17 +69,26 @@ const createTweetElement = (tweet) => {
 const renderTweets = (tweets) => {
   for (const user of tweets) {
     const $tweet = createTweetElement(user)
-    $(`.tweetsContainer`).prepend($tweet)
+    $(`.tweets-container`).prepend($tweet)
   }
 }
 
 const submitTweets = () => {
-  $("#submitForm").submit(function (e) {
+  $("#submit-form").submit(function (e) {
     e.preventDefault();
-    $.post("/tweets", $("#submitForm").serialize())
+    if ($('#tweet-text').val().length === 0) {
+      return $('#empty-text').slideDown('slow').delay(2200).fadeOut('slow')
+    }
+    if ($('#tweet-text').val().length > 140) {
+      return $('#long-text').slideDown('slow').delay(2200).fadeOut('slow')
+    }
+    $.post("/tweets", $("#submit-form").serialize())
       .then(() => {
+        $('#tweet-text').val('')
+        $('.counter').val(140)
         loadTweets()
       })
+
   });
 }
 
@@ -83,7 +99,22 @@ const loadTweets = () => {
     })
 }
 
+const redirecting = () => {
+
+  const jumpToTextarea = document.querySelector('#jump-to-textarea');
+  const jumpToTextarea2 = document.querySelector('#jump-to-textarea2');
+  const textarea = document.querySelector('#jump-here');
+
+  jumpToTextarea.addEventListener('click', function () {
+    textarea.scrollIntoView({ behavior: 'smooth' });
+  });
+  jumpToTextarea2.addEventListener('click', function () {
+    textarea.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
 $(() => {
+  redirecting();
   submitTweets();
   loadTweets();
 })

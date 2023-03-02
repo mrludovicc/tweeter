@@ -5,11 +5,14 @@
   align-items: center;
   flex-flow: column nowrap;
   justify-content: center;
-  background-color: #567500;
+  background-color: #d8ac1a;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
-.nav-header h2 {
+.nav-header p {
+  font-family: 'Source Sans Pro', cursive;
+  font-weight: 400;
+  font-size: 1.5em;
   color: white;
   margin-top: -0.5em;
 }
