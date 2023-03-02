@@ -99,7 +99,17 @@ const loadTweets = () => {
     })
 }
 
+const scrollUp = () => {
+  window.onscroll = function () { scrollFunction() };
 
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.querySelector('.scroll-to-top').classList.add("show");
+    } else {
+      document.querySelector('.scroll-to-top').classList.remove("show");
+    }
+  }
+}
 
 const redirecting = () => {
 
@@ -117,6 +127,7 @@ const redirecting = () => {
 
 $(() => {
 
+  scrollUp();
   redirecting();
   submitTweets();
   loadTweets();
