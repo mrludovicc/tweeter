@@ -64,3 +64,8 @@
 .icons p:hover {
   color: rgb(212, 185, 28);
 }
+
+#go-up {
+  display: flex;
+  position: sticky;
+}
