@@ -116,11 +116,9 @@ const scrollUp = () => {
 }
 
 const redirecting = () => {
-
   const jumpToTextarea = document.querySelector('#jump-to-textarea');
   const jumpToTextarea2 = document.querySelector('#jump-to-textarea2');
   const textarea = document.querySelector('#jump-here');
-
   jumpToTextarea.addEventListener('click', function () {
     textarea.scrollIntoView({ behavior: 'smooth' });
   });

@@ -78,7 +78,7 @@
 
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="jump-here">
       <div id="empty-text" hidden>
         <p>❌Please insert some text to tweet!❌</p>
       </div>
@@ -90,7 +90,7 @@
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST" id="submit-form">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?" id="jump-here"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <footer>
             <button type="submit" class="tweet-button">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
