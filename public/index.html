@@ -65,7 +65,7 @@
   <div class="page-container">
     <header class="nav-header">
       <div class="content">
-        <img src="/images/profile-hex.png" id="jump-here">
+        <img src="/images/profile-hex.png">
       </div>
       <br>
       <div>
@@ -90,7 +90,7 @@
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST" id="submit-form">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?" id="jump-here"></textarea>
           <footer>
             <button type="submit" class="tweet-button">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -100,7 +100,7 @@
       <article class="tweets-container">
         <!-- Adding the tweets here -->
       </article>
-      <a href="#" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
+      <button class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
   </div>
   </main>
 </body>

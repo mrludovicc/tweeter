@@ -95,6 +95,9 @@
   border-radius: 50%;
   text-align: center;
   line-height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .scroll-to-top:hover {
@@ -113,5 +116,18 @@
 
   .scroll-to-top {
     background-color: #4056A1;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #016e01;
+    ;
+  }
+
+  .icons p:hover {
+    color: #016e01;
+  }
+
+  .icons p:active {
+    color: #e70b0b;
   }
 }

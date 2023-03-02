@@ -109,6 +109,10 @@ const scrollUp = () => {
       document.querySelector('.scroll-to-top').classList.remove("show");
     }
   }
+
+  document.querySelector('.scroll-to-top').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
 const redirecting = () => {
