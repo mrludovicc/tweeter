@@ -15,11 +15,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
     rel="stylesheet">
+
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
-
-
 
   <!-- Nav CSS -->
   <link rel="stylesheet" href="/styles/nav.css" type="text/css">
@@ -38,7 +37,6 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
     integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -48,8 +46,10 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+
   <!-- Disable zooming -->
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
 </head>
 
 <body>
@@ -89,7 +89,6 @@
         <div class="error-msg"></div>
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST" id="submit-form">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <footer>
             <button type="submit" class="tweet-button">Tweet</button>
