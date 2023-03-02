@@ -46,7 +46,7 @@ const createTweetElement = (tweet) => {
         <p>${tweet.content.text}</p>
       </div>
       <footer>
-        <h6>${tweet.created_at}</h6>
+        <h6>${timeago.format(tweet.created_at)}</h6>
         <div class="icons">
           <p class="fa-solid fa-flag"></p>
           <p class="fa-solid fa-retweet"></p>
@@ -62,17 +62,28 @@ const createTweetElement = (tweet) => {
 const renderTweets = (tweets) => {
   for (const user of tweets) {
     const $tweet = createTweetElement(user)
-    $(`.tweetsContainer`).append($tweet)
+    $(`.tweetsContainer`).prepend($tweet)
   }
 }
 
 const submitTweets = () => {
   $("#submitForm").submit(function (e) {
     e.preventDefault();
-    $.post("/tweets", $("#submitForm").serialize());
+    $.post("/tweets", $("#submitForm").serialize())
+      .then(() => {
+        loadTweets()
+      })
   });
 }
+
+const loadTweets = () => {
+  $.ajax('/tweets', { method: 'GET' })
+    .then((data) => {
+      renderTweets(data);
+    })
+}
+
 $(() => {
-  renderTweets(tweets);
   submitTweets();
+  loadTweets();
 })
