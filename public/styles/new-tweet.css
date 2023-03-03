@@ -9,9 +9,12 @@
 #empty-text,
 #long-text {
   margin-top: 0.5em;
-  color: rgb(182, 0, 0);
+  color: #b60000;
   font-size: 1.2em;
-  border: 3px rgb(212, 0, 0) solid;
+  border: 3px #d40000 solid;
+}
+.counter {
+  color: #545149;
 }
 
 #tweet-text {
@@ -43,12 +46,23 @@ form footer {
   background-color: #5978db;
   border: 1px black solid;
   color: #FFF;
+  box-shadow: #545149;
 }
 
 .tweet-button:hover {
   background-color: #4056A1;
+  cursor: pointer;
+  box-shadow: 3px 2px 2px #54514980
 }
 
 .tweet-button:active {
   background-color: #293c79;
+}
+
+.red {
+  color: #FF3131;
+}
+
+.brown {
+  color: #CC5500;
 }

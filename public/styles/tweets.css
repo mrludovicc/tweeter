@@ -71,6 +71,7 @@
 
 .icons p:hover {
   color: #d8ac1a;
+  cursor: pointer;
 }
 
 .icons p:active {

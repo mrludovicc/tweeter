@@ -57,13 +57,13 @@ nav {
   transition: transform 0.4s ease-in-out;
 }
 
-.fa-angles-down:hover {
+.fa-angles-down {
   transform: scale(1.2);
   animation: bounce 1s ease-in-out;
   animation-iteration-count: infinite;
 }
 
-.fa-angles-down:hover:active {
+.fa-angles-down:active {
   transform: scale(1);
   animation: none;
 }

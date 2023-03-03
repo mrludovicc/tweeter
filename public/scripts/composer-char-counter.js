@@ -1,19 +1,23 @@
 const charCounter = () => {
-  $('#tweet-text').on('keyup', function() {
-    let charCount = $(this).val().length;
-    let counter = $(this).next().find('.counter');
+  $('#tweet-text').on('input', function() {
+    const charCount = $(this).val().length;
+    const counter = $(this).closest('form').find('.counter');
     const currentCount = 140 - charCount;
-    if (currentCount < 0) {
-      counter.css('color', 'red');
+    
+    if (currentCount < 30 && currentCount > 0) {
+      counter.addClass('brown');
+    } else if (currentCount <= 0) {
+      counter.removeClass('brown')
+      counter.addClass('red'); 
     } else {
-      counter.css('color', '#545149');
+      counter.removeClass('brown')
+      counter.removeClass('red');
     }
-    counter.html(currentCount);
+    counter.text(currentCount);
   });
-
 };
 
 
-$(() => {
+$(() => { 
   charCounter();
 });

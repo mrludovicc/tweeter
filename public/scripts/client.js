@@ -1,5 +1,5 @@
 //--------- ****** ******* ---------//
-const escapeP = function(str) {
+const escapeP = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -46,27 +46,31 @@ const renderTweets = (tweets) => {
 
 //--------- ****** ******* ---------//
 const submitTweets = () => {
-  $("#submit-form").submit(function(e) {
+  $("#submit-form").submit(function (e) {
     e.preventDefault();
-    if ($('#tweet-text').val().length === 0) {
-      return $('#empty-text').slideDown('slow').delay(2200).fadeOut('slow');
+    const textarea = $(this).find('#tweet-text')
+    const emptyText = $(this).closest('main.container').find('#empty-text')
+    const longText = $(this).closest('main.container').find('#long-text')
+    const counter = $(this).closest('form').find('.counter');
+
+    if (textarea.val().length === 0) {
+      return emptyText.slideDown('slow').delay(2500).slideUp('slow');
     }
-    if ($('#tweet-text').val().length > 140) {
-      return $('#long-text').slideDown('slow').delay(2200).fadeOut('slow');
+    if (textarea.val().length > 140) {
+      return longText.slideDown('slow').delay(3200).slideUp('slow');
     }
-    $.post("/tweets", $("#submit-form").serialize())
+    $.post("/tweets", $(this).serialize())
       .then(() => {
-        $('#tweet-text').val('');
-        $('.counter').val(140);
+        textarea.val('');
+        counter.val(140);
         loadTweets();
       });
-
   });
 };
 
 //--------- ****** ******* ---------//
 const loadTweets = () => {
-  $.ajax('/tweets', { method: 'GET' })
+  $.get('/tweets')
     .then((data) => {
       renderTweets(data);
     });
@@ -74,7 +78,7 @@ const loadTweets = () => {
 
 //--------- ****** ******* ---------//
 const scrollUp = () => {
-  window.onscroll = function() {
+  window.onscroll = function () {
     scrollFunction();
   };
 
@@ -86,7 +90,7 @@ const scrollUp = () => {
     }
   }
 
-  document.querySelector('.scroll-to-top').addEventListener('click', function() {
+  document.querySelector('.scroll-to-top').addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 };
@@ -95,12 +99,24 @@ const scrollUp = () => {
 const redirecting = () => {
   const jumpToTextarea = document.querySelector('#jump-to-textarea');
   const jumpToTextarea2 = document.querySelector('#jump-to-textarea2');
+
   const textarea = document.querySelector('#jump-here');
-  jumpToTextarea.addEventListener('click', function() {
+  const textareaField = document.querySelector('#tweet-text')
+
+  jumpToTextarea.addEventListener('click', function () {
     textarea.scrollIntoView({ behavior: 'smooth' });
   });
-  jumpToTextarea2.addEventListener('click', function() {
+
+  jumpToTextarea2.addEventListener('click', function () {
     textarea.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  jumpToTextarea.addEventListener('click', () => {
+    textareaField.focus();
+  });
+  
+  jumpToTextarea2.addEventListener('click', () => {
+    textareaField.focus();
   });
 };
 
