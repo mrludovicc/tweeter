@@ -8,7 +8,6 @@ nav {
 }
 
 .logo_name {
-  position: fixed;
   font-family: 'Bungee', cursive;
   font-size: 1.5em;
   display: flex;
@@ -71,5 +70,9 @@ nav {
 @media screen and (min-width: 1024px) {
   nav {
     background-color: #4056A1;
+  }
+
+  .logo_name {
+    position: fixed;
   }
 }
