@@ -22,14 +22,16 @@
 
 .new-tweet {
   overflow: hidden;
-  transition: height 0.5s ease;
   height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: height 2s ease, padding-top 1.5s ease, padding-bottom 1.5s ease;
 }
 
 .new-tweet.visible {
   height: auto;
-  padding: 20px;
-  width: 95%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .hidden {
