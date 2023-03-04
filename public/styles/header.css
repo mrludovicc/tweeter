@@ -1,13 +1,10 @@
 .nav-header {
   display: flex;
-  
   height: 520px;
   width: 100%;
   align-items: center;
   flex-flow: column nowrap;
   justify-content: center;
-  background-color: #d8ac1a;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
 .nav-header p {
@@ -16,6 +13,7 @@
   font-size: 1.5em;
   color: white;
   margin-top: -0.05em;
+
 }
 
 .nav-header p:active {
@@ -36,10 +34,11 @@
   .nav-header {
     width: 60%;
     margin: 12rem 1em 0 2em;
-    background-color: #016e01;
+    /* background-color: #016e01; */
   }
 
-  .nav-header p {
-    margin-bottom: 8rem;
+
+  .nav-header .imgP {
+    position: fixed;
   }
 }

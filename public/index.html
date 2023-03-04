@@ -64,13 +64,15 @@
   </nav>
   <div class="page-container">
     <header class="nav-header">
-      <div class="content">
-        <img src="/images/profile-hex.png">
-      </div>
-      <div>
-        <a href="https://github.com/mrludovicc/tweeter" target="_blank">
-          <p><strong>Mrludovic</strong> Alabed</p>
-        </a>
+      <div class="imgP">
+        <div class="content">
+          <img src="/images/profile-hex.png">
+        </div>
+        <div>
+          <a href="https://github.com/mrludovicc/tweeter" target="_blank">
+            <p><strong>Mrludovic</strong> Alabed</p>
+          </a>
+        </div>
       </div>
 
     </header>
@@ -84,7 +86,7 @@
       <div id="long-text" hidden>
         <p>⚠ Text is too long. Please keep it less than 140 character! ⚠</p>
       </div>
-      <section class="new-tweet">
+      <section class="new-tweet" id="new-tweet" hidden>
         <div class="error-msg"></div>
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST" id="submit-form">

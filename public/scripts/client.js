@@ -6,14 +6,14 @@ $(() => {
   loadTweets();
 });
 
-//--------- ****** ******* ---------//
+//--------- Decrypt the tweets ---------//
 const escapeP = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-//--------- ****** ******* ---------//
+//--------- Create the tweet format ---------//
 const createTweetElement = (tweet) => {
   const safeHTML = escapeP(tweet.content.text);
   const tweetUser = tweet.user;
@@ -44,7 +44,7 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
-//--------- ****** ******* ---------//
+//--------- Takes the tweets and add it to the top  ---------//
 const renderTweets = (tweets) => {
   for (const user of tweets) {
     const $tweet = createTweetElement(user);
@@ -52,7 +52,7 @@ const renderTweets = (tweets) => {
   }
 };
 
-//--------- ****** ******* ---------//
+//--------- Submit and check validation of the tweets  ---------//
 const submitTweets = () => {
   $("#submit-form").submit(function (e) {
     e.preventDefault();
@@ -77,7 +77,7 @@ const submitTweets = () => {
   });
 };
 
-//--------- ****** ******* ---------//
+//--------- get the tweets and render the data ---------//
 const loadTweets = () => {
   $.get('/tweets')
     .then((data) => {
@@ -85,7 +85,7 @@ const loadTweets = () => {
     });
 };
 
-//--------- ****** ******* ---------//
+//--------- button to scroll to the beginning of the page ---------//
 const scrollUp = () => {
   window.onscroll = function () {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -97,23 +97,34 @@ const scrollUp = () => {
   document.querySelector('.scroll-to-top').addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-  };
+};
 
 
 
 
-//--------- ****** ******* ---------//
+//--------- Hide/show the form and focus on it ---------//
 const redirecting = () => {
   const jumpToTextarea = document.querySelector('#jump-to-textarea');
   const jumpToTextarea2 = document.querySelector('#jump-to-textarea2');
 
   const textarea = document.querySelector('#jump-here');
   const textareaField = document.querySelector('#tweet-text')
+  const newTweet = document.getElementById('new-tweet');
 
+  //---hide-show the form
+  jumpToTextarea.addEventListener('click', () => {
+    newTweet.removeAttribute('hidden');
+    newTweet.classList.toggle('visible');
+  });
+
+  //---Scroll to form and focus on it
   const jumpToTextareaHandler = () => {
-    textarea.scrollIntoView({ 
-      behavior: 'smooth' });
-    textareaField.focus();
+    if (newTweet.classList.contains('visible')) {
+      textarea.scrollIntoView({
+        behavior: 'smooth'
+      });
+      textareaField.focus();
+    }
   }
 
   jumpToTextarea.addEventListener('click', jumpToTextareaHandler);

@@ -9,11 +9,13 @@
   margin: 1em 0;
   width: 90%;
   font-family: "Source Sans Pro", cursive;
-  border: 3px #545149 solid;
+  border: 3px #f0f2fc solid;
+  font-size: 1.6rem;
+  color: #f4f5f8;
 }
 
 .tweets:hover {
-  box-shadow: 10px 5px 5px #54514980;
+  box-shadow: 10px 5px 5px #807c6f80;
 }
 
 .tweets header {
@@ -24,7 +26,8 @@
 .icon-name {
   display: flex;
   flex-direction: row;
-  width: 50%
+  width: 50%;
+  background-color: #5380a9d6;
 }
 
 #nickname {
@@ -33,7 +36,9 @@
   color: #54514980;
   font-weight: 600;
   width: 90%;
+  color: #f7f9ff;
   padding-right: 1em;
+  background-color: #5380a9d6;
   flex-direction: row;
   justify-content: flex-end;
 }
@@ -46,7 +51,7 @@
 .tweets #main-content {
   margin-left: 2%;
   width: 95%;
-  border-bottom: 3px #545149 solid;
+  border-bottom: 3px #f0f2fc solid;
   max-height: 200px;
   word-wrap: break-word;
 }
@@ -64,7 +69,7 @@
 
 .icons {
   display: flex;
-  color: #4056A1;
+  color: #5380a9d6;
   margin-right: 0.5em;
   flex-wrap: wrap;
 }
@@ -102,7 +107,7 @@
 }
 
 .scroll-to-top:hover {
-  background-color: #333;
+  background-color: #080808;
 }
 
 .scroll-to-top.show {
@@ -120,12 +125,12 @@
   }
 
   .scroll-to-top:hover {
-    background-color: #016e01;
+    background-color: #080808;
     ;
   }
 
   .icons p:hover {
-    color: #016e01;
+    color: #4056A1;
   }
 
   .icons p:active {
