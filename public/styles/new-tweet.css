@@ -49,6 +49,7 @@
   resize: none;
   background-color: transparent;
   color: #f2f3f9;
+  font-size: 1.8rem;
 }
 
 #tweet-text::placeholder {

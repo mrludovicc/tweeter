@@ -15,6 +15,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ![screenshot for the desktop version](https://github.com/mrludovicc/tweeter/raw/master/public/images/desktop-version.png)
 
+![screenshot for the mobile version V2](./public/images/mobile-version-V2.png)
+
+![screenshot for the desktop version V2 -no form-](./public/images/desktop-version-V2-no-form.png)
+
+![screenshot for the desktop version V2](./public/images/desktop-version-V2.png)
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
