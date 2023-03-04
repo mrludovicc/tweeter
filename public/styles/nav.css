@@ -1,6 +1,5 @@
 nav {
   display: flex;
-  position: fixed;
   color: #FFF;
   height: 120px;
   width: 100%;
@@ -9,6 +8,7 @@ nav {
 }
 
 .logo_name {
+  position: fixed;
   font-family: 'Bungee', cursive;
   font-size: 1.5em;
   display: flex;

@@ -1,3 +1,7 @@
+$(() => { 
+  charCounter();
+});
+
 const charCounter = () => {
   $('#tweet-text').on('input', function() {
     const charCount = $(this).val().length;
@@ -17,7 +21,3 @@ const charCounter = () => {
   });
 };
 
-
-$(() => { 
-  charCounter();
-});

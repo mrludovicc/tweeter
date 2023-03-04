@@ -12,6 +12,7 @@
   color: #b60000;
   font-size: 1.2em;
   border: 3px #d40000 solid;
+  padding: 0 1rem;
 }
 .counter {
   color: #545149;

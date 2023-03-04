@@ -1,5 +1,6 @@
 .nav-header {
   display: flex;
+  
   height: 520px;
   width: 100%;
   align-items: center;
@@ -29,6 +30,7 @@
 @media screen and (min-width: 1024px) {
   .page-container {
     display: flex;
+    margin-top: -7rem;
   }
 
   .nav-header {

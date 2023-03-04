@@ -38,12 +38,6 @@ main {
   align-items: center;
 }
 
-h3 {
-  width: 100%;
-  padding-bottom: 0.2em;
-  border-bottom: 5px solid gray;
-}
-
 a:link {
   text-decoration: none;
 }

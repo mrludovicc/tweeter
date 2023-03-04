@@ -1,3 +1,11 @@
+//--------- RUNS THE WEBSITE ---------//
+$(() => {
+  scrollUp();
+  redirecting();
+  submitTweets();
+  loadTweets();
+});
+
 //--------- ****** ******* ---------//
 const escapeP = function (str) {
   let div = document.createElement("div");
@@ -63,6 +71,7 @@ const submitTweets = () => {
       .then(() => {
         textarea.val('');
         counter.val(140);
+        $(".tweets-container").empty();
         loadTweets();
       });
   });
@@ -79,21 +88,19 @@ const loadTweets = () => {
 //--------- ****** ******* ---------//
 const scrollUp = () => {
   window.onscroll = function () {
-    scrollFunction();
-  };
-
-  function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       document.querySelector('.scroll-to-top').classList.add("show");
     } else {
       document.querySelector('.scroll-to-top').classList.remove("show");
     }
   }
-
   document.querySelector('.scroll-to-top').addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-};
+  };
+
+
+
 
 //--------- ****** ******* ---------//
 const redirecting = () => {
@@ -103,27 +110,12 @@ const redirecting = () => {
   const textarea = document.querySelector('#jump-here');
   const textareaField = document.querySelector('#tweet-text')
 
-  jumpToTextarea.addEventListener('click', function () {
-    textarea.scrollIntoView({ behavior: 'smooth' });
-  });
-
-  jumpToTextarea2.addEventListener('click', function () {
-    textarea.scrollIntoView({ behavior: 'smooth' });
-  });
-
-  jumpToTextarea.addEventListener('click', () => {
+  const jumpToTextareaHandler = () => {
+    textarea.scrollIntoView({ 
+      behavior: 'smooth' });
     textareaField.focus();
-  });
-  
-  jumpToTextarea2.addEventListener('click', () => {
-    textareaField.focus();
-  });
+  }
+
+  jumpToTextarea.addEventListener('click', jumpToTextareaHandler);
+  jumpToTextarea2.addEventListener('click', jumpToTextareaHandler);
 };
-
-//--------- RUNS THE WEBSITE ---------//
-$(() => {
-  scrollUp();
-  redirecting();
-  submitTweets();
-  loadTweets();
-});
