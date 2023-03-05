@@ -10,6 +10,7 @@
   width: 90%;
   font-family: "Source Sans Pro", cursive;
   border: 3px #f0f2fc solid;
+  border-radius: 0.4rem;
   font-size: 1.6rem;
   color: #f4f5f8;
 }
@@ -28,6 +29,7 @@
   flex-direction: row;
   width: 50%;
   background-color: #5380a9d6;
+  border-radius: 0.3rem 0 0 0;
 }
 
 #nickname {
@@ -38,6 +40,7 @@
   width: 90%;
   color: #f7f9ff;
   padding-right: 1em;
+  border-radius: 0 0.3rem 0 0;
   background-color: #5380a9d6;
   flex-direction: row;
   justify-content: flex-end;

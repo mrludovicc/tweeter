@@ -12,8 +12,12 @@
   font-weight: 400;
   font-size: 1.5em;
   color: white;
-  margin-top: -0.05em;
+  margin: 0.7rem 0 1rem 2.5rem;
 
+}
+
+.nav-header .imgP {
+  margin-top: -6rem;
 }
 
 .nav-header p:active {
@@ -37,8 +41,9 @@
     /* background-color: #016e01; */
   }
 
-
   .nav-header .imgP {
     position: fixed;
+    margin-top: 0;
   }
+
 }
