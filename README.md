@@ -10,16 +10,16 @@ This repository is the starter code for the project: Students will fork and clon
 - the icons has three colors, the regular then it will change when hovering over them, and will change when click on them.
 
 ## Final Product
-# V1
-![screenshot for the mobile version](./public/images/mobile-version.png)
+### V1
+![screenshot for the mobile version](https://github.com/mrludovicc/tweeter/raw/master/public/images/mobile-version.png)
 
-![screenshot for the desktop version](./public/images/desktop-version.png)
-# V2
-![screenshot for the mobile version V2](./public/images/mobile-version-V2.1.png)
+![screenshot for the desktop version](https://github.com/mrludovicc/tweeter/raw/master/public/images/desktop-version.png)
+### V2
+![screenshot for the mobile version V2](https://github.com/mrludovicc/tweeter/raw/master/public/images/mobile-version-V2.1.png)
 
-![screenshot for the desktop version V2 -no form-](./public/images/desktop-version-V2.1-no-form.png)
+![screenshot for the desktop version V2 -no form-](https://github.com/mrludovicc/tweeter/raw/master/public/images/desktop-version-V2.1-no-form.png)
 
-![screenshot for the desktop version V2](./public/images/desktop-version-V2.1-form.png)
+![screenshot for the desktop version V2](https://github.com/mrludovicc/tweeter/raw/master/public/images/desktop-version-V2.1-form.png)
 
 ## Getting Started
 
