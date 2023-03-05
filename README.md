@@ -11,9 +11,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 # V1
-![screenshot for the mobile version](https://github.com/mrludovicc/tweeter/raw/master/public/images/mobile-version.png)
+![screenshot for the mobile version](./public/images/mobile-version.png)
 
-![screenshot for the desktop version](https://github.com/mrludovicc/tweeter/raw/master/public/images/desktop-version.png)
+![screenshot for the desktop version](./public/images/desktop-version.png)
 # V2
 ![screenshot for the mobile version V2](./public/images/mobile-version-V2.1.png)
 
